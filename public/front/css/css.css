@@ -1,0 +1,1906 @@
+/* defult format */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid; */
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    /* font-family: 'Cairo', sans-serif !important; */
+    /* overflow-x: hidden; */
+    font-family: 'Amiri', serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;  */
+    /* cursor: url(http://www.rw-designer.com/cursor-extern.php?id=110651); */
+}
+
+/*---------------------------------- nav----------------------------------------------------------------------------------------------- */
+.navsec {
+    background: #ececec;
+}
+
+.navsec a {
+    font-size: 25px;
+    color: #ec3454;
+}
+
+.navmarket {
+    padding: 40px 0px 0px 0px;
+}
+
+.navuser {
+    padding: 40px 0px 0px 0px;
+}
+
+
+.navsearch {
+    padding: 40px 0px 0px 100px;
+}
+
+.navsearch .div {
+    background: #f3f3f3;
+}
+
+.navsearch input {
+    border: none;
+    background: #f3f3f3;
+    width: 80%;
+    padding: 10px 0px;
+}
+
+.navsearch svg {
+    font-size: 25px;
+    color: #ec3454;
+}
+
+.svg-inline--fa {
+    vertical-align: middle;
+
+}
+
+
+
+.navimg img {
+    width: 40%;
+    padding: 10px 0px;
+}
+
+.navtoggle {
+    padding: 40px 0px 0px 0px;
+    float: left;
+
+}
+
+.navtoggle button {
+    font-size: 25px;
+    color: #ec3454;
+}
+
+/*---------------------------------- header----------------------------------------------------------------------------------------------- */
+header {
+    background: url(../img/header.png);
+    background-size: cover;
+    text-align: center;
+    padding: 50px 0px;
+
+}
+
+.headerlogo {
+    font-size: 100px;
+    padding: 50px 0px;
+    color: white;
+}
+
+.headertitle {
+    font-size: 80px;
+    color: white;
+    padding: 50px 0px;
+}
+
+.headerbutton {
+    padding: 50px 0px;
+
+}
+
+.headerbutton button {
+    font-size: 30px;
+    color: white;
+    background: #c9204f;
+    padding: 10px 100px;
+    border-radius: 50px;
+    border: none;
+}
+
+.headerbutton button img {
+    width: 50px;
+
+}
+
+/*---------------------------------- search resturant------------------------------------------------------------------------- */
+.searchresturant {
+    background: url(../img/Group\ 1034.jpg);
+    background-size: cover;
+}
+
+.searchresturant h1 {
+    text-align: center;
+    color: #250142;
+    font-weight: bold;
+    padding: 50px 0px;
+}
+
+.searchresturantrow select {
+    width: 80%;
+    background: #f6f6f6;
+    padding: 20px 0px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.searchresturantitem {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+
+}
+
+.resturantdetail {
+    color: #260243;
+    font-size: 20px;
+}
+
+.resturantdetail h3 {
+    font-size: 30px;
+    color: #ec3454;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.resturantdetail .checked {
+    color: #ff4057;
+}
+
+.openresturant {
+    font-size: 20px;
+    padding: 80px 0px 0px 0px;
+    text-align: center;
+}
+
+.openresturant a {
+    color: #16bf4e;
+
+}
+
+/*---------------------------------- offer------------------------------------------------------------------------- */
+.offer {
+    margin: 180px 0px;
+}
+
+.offertext {
+    background: url(../img/offers-bg.jpg);
+    background-size: cover;
+    font-size: 45px;
+    text-align: center;
+    color: white;
+    border-radius: 30px;
+    padding: 50px 0px 0px 0px;
+}
+
+.offertext button {
+    font-size: 30px;
+    color: white;
+    background: linear-gradient(#e32f52, #c81f4f);
+    padding: 10px 100px;
+    border-radius: 50px;
+    border: none;
+    margin-top: 20px;
+}
+
+/*----------------------------------addproductpage ------------------------------------------------------------------------- */
+.addproductpage {
+    background: #fff;
+    box-shadow: #f1f1f1 10px 10px 10px 10px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.addproductpage button {
+    font-size: 30px;
+    color: white;
+    background: linear-gradient(#ea3253, #a30b4a);
+    padding: 10px 150px;
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+/*---------------------------------- download------------------------------------------------------------------------- */
+.downloadapp {
+    background: url(../img/Group\ 1035.png);
+    background-size: cover;
+
+
+}
+
+.downloadapp .col-7 {
+    padding: 100px 0px;
+
+}
+
+.downloadapp h1 {
+    font-size: 65px;
+    /* text-align: center; */
+    color: white;
+    padding-top: 50px;
+}
+
+.downloadapp button {
+    font-size: 50px;
+    color: white;
+    background: url(../img/download\ button.png);
+    padding: 10px 90px;
+    border-radius: 20px;
+    border: none;
+}
+
+/*---------------------------------- footer------------------------------------------------------------------------- */
+footer {
+    background: url(../img/footerbg.png);
+    background-size: cover;
+}
+
+.footertext {
+    color: white;
+    padding: 20px 0px;
+    font-size: 40px;
+}
+
+.footertext a {
+    color: white;
+
+}
+
+.footertext img {
+    width: 50px;
+}
+
+.footertext p {
+    font-size: 20px;
+    max-width: 50%;
+    margin-top: 20px;
+
+}
+
+.footerimg {
+    padding: 40px 0px;
+}
+
+/*---------------------------------- home page media quary------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+    .navsearch input {
+        width: 75%;
+    }
+
+    .navimg {
+        text-align: right !important;
+    }
+
+    .offertext button {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navimg img {
+        width: 60%;
+        padding: 10px 0px;
+    }
+
+    .navsearch input {
+        width: 60%;
+        padding: 0px 0px;
+    }
+
+    .headertitle {
+        font-size: 60px;
+    }
+
+    .resturantdetail {
+        font-size: 15px;
+    }
+
+    .searchresturantitem {
+        padding: 10px 20px 0px 20px;
+
+    }
+
+    .downloadapp .col-7 {
+        padding: 60px 0px;
+    }
+
+    .downloadapp h1 {
+        font-size: 60px;
+    }
+
+    .downloadapp button {
+        font-size: 40px;
+        padding: 10px 40px;
+    }
+
+
+    .footertext p {
+        max-width: 70%;
+
+    }
+
+    .footerimg {
+        padding: 70px 0px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .navsearch {
+        margin-top: 10px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .navsearch input {
+        width: 85%;
+        padding: 10px 0px;
+    }
+
+    .navimg {
+        text-align: center !important;
+    }
+
+    .searchresturantrow select {
+        width: 100%;
+        background: #f6f6f6;
+        padding: 20px 0px;
+        border-radius: 30px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+
+    .resturantdetail {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .openresturant {
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+
+    .downloadapp .col-sm-7 {
+        padding: 60px 0px;
+    }
+
+    .downloadapp h1 {
+        font-size: 35px;
+    }
+
+
+    .footertext p {
+        font-size: 15px;
+        max-width: 100%;
+
+    }
+
+    .footertext {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .footerimg {
+        padding: 0px 0px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .navtoggle button {
+        font-size: 20px;
+        color: #ec3454;
+    }
+
+    .headertitle {
+        font-size: 50px;
+        padding: 0px 0px;
+    }
+
+    .searchresturantrow select {
+        width: 100%;
+        padding: 10px 0px;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+
+    .downloadapp .col-sm-7 {
+        padding: 60px 0px;
+    }
+
+    .downloadapp h1 {
+        font-size: 25px;
+    }
+
+}
+
+/*----------------------------------------- Sofra restuarent page---------------------------------------------------------------------- */
+.navusermenu {
+    top: 72px;
+    left: 0px;
+}
+
+/*--------------- header----------------- */
+
+
+.resturantheader {
+    background-image: url(../img/Group\ 1038.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0px;
+
+}
+
+.resturantheader img {
+    width: 20%;
+    margin-bottom: 50px;
+
+}
+
+.resturantheader p {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.resturantheader .div {
+    width: 100%;
+}
+
+.resturantheader .div .span {
+    background: white;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 50px;
+    color: #240041;
+
+}
+
+.resturantheader .div .span .checked {
+    color: #ff4057;
+
+}
+
+/*--------------- meals----------------- */
+.resturantmeals {
+    background: url(../img/Group\ 1034.jpg);
+    background-size: cover;
+    padding-top: 50px;
+}
+
+.mealsitem {
+    background: #fff;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.mealsitem img {
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+
+.mealsitem h3 {
+    font-size: 25px;
+    color: #ff4158;
+}
+
+.mealsitem .text-center p {
+    font-size: 18px;
+    color: #848484;
+}
+
+.mealdetail {
+    padding: 0px 20px 0px 0px;
+    font-size: 18px;
+    margin-bottom: 15px;
+
+}
+
+.mealdetail {
+    color: #565656;
+}
+
+.mealdetailtext {
+    color: #ec3858;
+}
+
+.mealsitem .text-center button {
+    background: url(../img/download\ button.png);
+    width: 80%;
+    padding: 20px 0px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #f7e4ea;
+
+}
+
+/*----------------------------------------- sell page---------------------------------------------------------------------- */
+.resturantmeals h1 {
+    font-size: 50px;
+    color: #4a2e61;
+}
+
+.sellsbut {
+    text-align: center;
+    background: linear-gradient(#e63053, #a60d4a);
+    padding: 10px 80px;
+    border-radius: 50px;
+    border: none;
+    margin: 25px 0px;
+    font-size: 30px;
+    color: #f7e4ea;
+}
+
+.selldetail {
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+.sellitem {
+    position: relative;
+}
+
+.absicon {
+    position: absolute;
+    font-size: 50px;
+    top: 10;
+    right: 10;
+    color: black;
+}
+
+/*-----------------------------------------previous orders page---------------------------------------------------------------------- */
+
+.previous-orders {
+    background: #ec3454;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin: 0px 0px 50px 0px;
+}
+
+.selectorder button {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 30px 0px;
+
+
+}
+
+.selectorder button:hover {
+    background: linear-gradient(#e63053, #a60d4a);
+    color: #000;
+    border-bottom: #4a2e61 10px solid;
+
+}
+
+
+
+/*-----------------------------------------my orders page---------------------------------------------------------------------- */
+
+
+
+
+.lastorder {
+    margin-bottom: 100px;
+}
+
+.previousorderitem {
+    background: #ececec;
+    padding: 20px;
+    margin: 10px 0px;
+    border-radius: 30px;
+}
+
+
+.previousorderitem img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: #ec3454 5px solid;
+}
+
+.previousorderitem h3 {
+    color: #ec3454;
+    font-size: 50px;
+}
+
+.previousorderitem p {
+    color: #888888;
+    font-size: 30px;
+    text-align: right;
+    line-height: 55px;
+}
+.previousorderbutt {
+    padding-top: 100px;
+}
+
+.previousorderbutt button {
+    padding: 10px 50px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background-color: #ff4057;
+}
+
+.previousorderbutt button:first-child {
+    background: #008d3d;
+}
+
+
+@media screen and (max-width: 768px) {
+    .previousorderitem {
+        background: #ececec;
+        padding: 10px;
+        margin: 10px 0px;
+        border-radius: 30px;
+    }
+
+    .previousorderitem img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: #ec3454 5px solid;
+    }
+
+
+    .previousorderitem h3 {
+        text-align: right !important;
+    }
+
+    .previousorderitem p {
+        text-align: right !important;
+    }
+    .previousorderbutt {
+        padding-top: 50px;
+    }
+    .previousorderbutt button {
+        padding: 5px 30px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .previousorderitem h3 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .previousorderitem img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .previousorderitem h3 {
+        font-size: 35px;
+    }
+
+    .previousorderitem p {
+        font-size: 25px;
+    }
+}
+.mypreviousorderbutt button {
+    padding: 10px 100px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background: #009523;
+}
+
+@media screen and (max-width: 992px) {
+
+    .myorderitem h3 {
+        text-align: left;
+        font-size: 30px;
+    }
+
+    .myorderitem p {
+        font-size: 20px;
+        text-align: left;
+
+    }
+    .currentorderphone button {
+        font-size: 20px !important;
+        padding: 15px 50px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+    .myorderitem h3 {
+        text-align: left;
+        font-size: 30px;
+    }
+
+    .myorderitem p {
+        font-size: 20px;
+        text-align: left;
+
+    }
+    .currentorderphone button {
+        font-size: 20px !important;
+        padding: 20px 30px;
+    }
+    .currentorderconfirm button {
+        padding: 20px 50px;
+        font-size: 20px !important;
+    }
+
+}
+@media screen and (max-width: 575px) {
+    .myordercol .row {
+        padding: 0;
+        margin: 0;
+        text-align: center !important;
+    }
+
+    .myorderitem p,
+    .myorderitem h3 {
+        text-align: center !important;
+
+    }
+    .currentorderimg img {
+        width: 300px;
+        height: 300px;
+        margin-right: 80px;
+
+    }
+    .currentorderphone button {
+        text-align: center !important;
+    }
+
+    .currentorderconfirm {
+        text-align: center !important;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+
+    .myorderitem h3 {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .myorderitem p {
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+    .previousorderbutt {
+        padding-top: 10px;
+    }
+    .currentorderimg img {
+        margin-right: 0px;
+
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+
+    .myorderitem h3 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+
+    .myorderitem h3 {
+        font-size: 35px;
+    }
+    .currentorderimg img {
+        width: 250px;
+        height: 250px;
+        margin-right: 0px;
+
+    }
+}
+
+
+/*-----------------------------------------my previous order page---------------------------------------------------------------------- */
+
+
+.myprevorderitem h3 {
+    color: #240041;
+}
+
+.myprevorderitem p {
+    color: #a20d4c;
+}
+
+@media screen and (max-width: 768px) {
+    .myprevorderitem p {
+        font-size: 15px;
+    }
+
+    .selectmyorder {
+        font-size: 45px;
+
+    }
+}
+
+
+/*-----------------------------------------my orders-current page---------------------------------------------------------------------- */
+@media screen and (max-width: 425px) {
+    .currentorderconfirm {
+        text-align: center;
+    }
+}
+@media screen and (max-width:320px) {
+
+.mypreviousorderbutt button {
+    padding: 10px 70px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+}
+@media screen and (max-width:320px) {
+    .currentorderphone button {
+        font-size: 15px !important;
+        padding: 10px 50px;
+    }
+
+    .currentorderconfirm button {
+        padding: 10px 50px;
+        font-size: 12px !important;
+    }
+}
+
+/*-----------------------------------------my orders-new page---------------------------------------------------------------------- */
+.neworder button {
+    padding: 10px 50px;
+}
+
+@media screen and (max-width: 575px) {
+    .neworderphone {
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .neworder button {
+        padding: 10px 40px;
+    }
+}
+/*-----------------------------------------offer page---------------------------------------------------------------------- */
+.offerpage p {
+    color: #ec3454;
+    border-right: #250142 5px solid;
+    font-size: 50px;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+.offerpage button {
+    background: linear-gradient(#e73153, #a50c4a);
+    color: white;
+    font-size: 30px;
+    border: none;
+    margin: 50px 0px;
+    border-radius: 50px;
+    padding: 10px 70px;
+}
+
+.offerpage img {
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width:375px) {
+    .offerpage p {
+        font-size: 40px;
+    }
+    
+}
+
+@media screen and (max-width:320px) {
+    .offerpage p {
+        font-size: 30px;
+    }
+
+    .offerpage button {
+        font-size: 20px;
+
+    }
+
+}
+
+/*-----------------------------------------offer page---------------------------------------------------------------------- */
+.addoffer p {
+    color: #ec3454;
+    font-size: 50px;
+    margin: 20px 0px;
+}
+
+.addofferpage {
+    background: #ececec;
+    text-align: center;
+    padding: 50px 0px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    box-shadow: #d8d8d8 5px 5px 5px 5px;
+}
+
+.offerimg p {
+    font-size: 20px;
+    color: #2c0948;
+}
+
+.addofferinput {
+    padding: 10px 70px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 50px;
+    background: #f3f3f3;
+    font-size: 20px;
+
+}
+
+.addofferinput::placeholder {
+    color: #aa9db4;
+}
+
+.addofferpage button {
+    padding: 10px 100px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(#e73153, #a50c4a);
+    color: white;
+    font-size: 30px;
+}
+
+.calendarcol input,
+.calendarcol2 input {
+    font-size: 20px;
+    width: 165px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 50px;
+    background: #f3f3f3;
+    color: #aa9db4;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.calendar {
+    position: absolute;
+    left: 10px;
+    font-size: 30px;
+    top: 5px;
+}
+
+.calendar2 {
+    position: absolute;
+    right: 135px;
+    font-size: 30px;
+    top: 5px;
+}
+
+.calendarcol ::placeholder {
+    color: #aa9db4;
+
+}
+
+input[type="date"]+.calendar,
+input[type="date"]+.calendar2 {
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+
+    .addofferinput {
+        width: 90%;
+    }
+
+    .myprevorderitem h3 {
+        text-align: left;
+    }
+
+    .myprevorderitem p {
+        text-align: left;
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+
+    .addofferinput {
+        padding: 10px 0px;
+
+    }
+
+    .addproductpage button {
+        font-size: 30px;
+        color: white;
+        background: linear-gradient(#ea3253, #a30b4a);
+        padding: 10px 100px;
+        border-radius: 15px;
+        border: none;
+        margin-bottom: 20px;
+    }
+    .myprevorderitem h3 {
+        text-align: left;
+    }
+
+    .myprevorderitem p {
+        text-align: left;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width:575px) {
+    
+    .calendarcol,
+    .calendarcol2 {
+        text-align: center !important;
+        width: 90% !important;
+    }
+
+    .calendarcol input,
+    .calendarcol2 input {
+        width: 200px;
+    }
+
+    .calendar {
+        left: 160px;
+        /* font-size: 30px; */
+        top: 5px;
+    }
+
+    .calendar2 {
+        right: 310px;
+    }
+
+    .addproductpage {
+        margin-right: 0px;
+    }
+    
+    .myprevorderitem h3 {
+        text-align: center !important;
+    }
+
+    .myprevorderitem p {
+        text-align: center !important;
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width:555px) {
+    .calendar {
+        left: 150px;
+        top: 5px;
+    }
+
+    .calendar2 {
+        right: 305px;
+    }
+
+    .addofferinput {
+        padding: 10px 0px;
+        width: 80%;
+        font-size: 20px;
+
+    }
+
+}
+
+@media screen and (max-width:535px) {
+    .calendar {
+        left: 150px;
+        top: 5px;
+    }
+
+    .calendar2 {
+        right: 290px;
+    }
+}
+
+@media screen and (max-width:510px) {
+    .calendar {
+        left: 130px;
+        top: 5px;
+    }
+
+    .calendar2 {
+        right: 280px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .calendar {
+        left: 120px;
+        top: 5px;
+    }
+
+    .calendar2 {
+        right: 270px;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .calendar {
+        left: 110px;
+        top: 5px;
+    }
+
+    .calendar2 {
+        right: 260px;
+    }
+}
+
+@media screen and (max-width:435px) {
+    .calendar {
+        left: 110px;
+        top: 5px;
+    }
+
+    .calendar2 {
+        right: 240px;
+    }
+}
+
+@media screen and (max-width:394px) {
+    .calendar {
+        left: 90px;
+        top: 5px;
+    }
+
+    .calendar2 {
+        right: 220px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .calendar {
+        left: 80px;
+        top: 5px;
+    }
+
+    .calendar2 {
+        right: 190px;
+    }
+}
+
+/*-----------------------------------------meal page---------------------------------------------------------------------- */
+.mealpage {
+    background: url(../img/meal-bg.jpg);
+    background-size: cover;
+    color: #240041;
+    line-height: 50px;
+    margin-top: 50px;
+}
+
+.mealpage h1 {
+    font-size: 50px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+.mealpage h3 {
+    font-size: 30px;
+    /* line-height: 100px; */
+    text-align: center;
+}
+
+.mealpage span {
+    line-height: 50px;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.mealpagedetail {
+    margin-bottom: 50px;
+}
+
+.mealpagerow {
+    border-bottom: #979797 1px solid;
+}
+
+.butimg img {
+    width: 60%;
+}
+
+.butimg button {
+    background: transparent;
+    border: none;
+}
+
+.shopinformation span {
+    color: #ff4057;
+    font-size: 40px;
+    line-height: 100px;
+}
+
+/* ---------eval ---------  */
+.evaltitle h1 {
+    color: #ec3454;
+    border-right: #250142 5px solid;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.evaltitle p {
+    color: #868686;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.evaluser {
+    font-size: 30px;
+    background: #e5e5e5;
+    padding: 50px 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+
+}
+
+.byuser {
+    color: #ff4158;
+}
+
+.evalstars {
+    color: #240041;
+    background-color: #fff;
+    padding: 10px 50px;
+    border-radius: 50px;
+
+
+}
+
+.evalstars .checked {
+    color: #ff4057;
+}
+
+.evaluser p {
+    color: #ff4057;
+    margin-top: 50px;
+}
+
+/* ---------sent eval ---------  */
+
+.senteval h1 {
+    color: #ec3454;
+    border-right: #250142 5px solid;
+    font-size: 50px;
+    padding: 20px;
+    text-align: right !important;
+}
+
+.sentevaldiv {
+    margin-bottom: 20px;
+
+}
+
+.sentstars {
+    background: #ececec !important;
+    font-size: 30px;
+    padding: 10px 40px;
+
+}
+
+.senteval textarea {
+    background: #f9f9f9;
+    padding: 10px 50px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    box-shadow: #d8d8d8 5px 5px 5px 5px;
+
+}
+
+.senteval textarea::placeholder {
+    font-size: 20px;
+    color: #aaa5a5;
+}
+
+.senteval button {
+    font-size: 30px;
+    color: white;
+    background: linear-gradient(#f06880, #a4104f);
+    padding: 10px 100px;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 50px;
+}
+
+/* --------- more food ---------  */
+
+.morefood h1 {
+    color: #ec3454;
+    border-right: #250142 5px solid;
+    font-size: 50px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.responsivemorefood {
+    background: url(../img/offers-bg.jpg);
+    padding: 50px 0px;
+}
+
+.responsivemorefood {
+    text-align: center;
+}
+
+.slick-dots li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.slick-dots button {
+    background: #240041;
+    border: none;
+    border-radius: 50px;
+    padding: 0px 10px;
+    font-size: 20px;
+    color: #240041;
+
+}
+
+.slick-active button {
+    background: #ec3454;
+    color: #ec3454;
+
+}
+
+.relativediv {
+    position: relative;
+    height: auto;
+    padding: 0px 20px;
+    margin: 50px 0px;
+
+}
+
+.relativediv img {
+    border-radius: 20px;
+    height: 50%;
+}
+
+.absldiv {
+    position: absolute;
+    top: 0;
+    right: 20;
+    background: #6b6b6c79;
+    cursor: pointer;
+    padding: 130px 98 px;
+    border-radius: 20px;
+    display: none;
+
+
+}
+
+.relativediv:hover .absldiv {
+    display: block;
+}
+
+.absldiv a {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    /* max-width: 299px;
+    max-height: 30px !important; */
+}
+
+@media screen and (max-width:1024px) {
+    .absldiv {
+        padding: 50px 57px;
+    }
+}
+
+@media screen and (max-width:920px) {
+    .absldiv {
+        padding: 50px 44px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .absldiv {
+        padding: 48px 57px;
+    }
+
+    .evaluser {
+        font-size: 29px;
+        background: #e5e5e5;
+        padding: 50px 20px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .absldiv {
+        padding: 48px 79px;
+    }
+}
+
+@media screen and (max-width:575px) {
+
+    .evaluser {
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+    .byuser {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    .absldiv {
+        padding: 48px 168px 48px 168px;
+    }
+
+    .shopinformation span {
+        font-size: 30px;
+    }
+
+    .evaltitle h1 {
+        font-size: 40px;
+    }
+
+    .senteval h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .morefood h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .absldiv {
+        padding: 48px 141px 48px 141px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .absldiv {
+        padding: 47px 116px 47px 116px;
+        text-align: center;
+    }
+
+    .evalstars {
+        padding: 10px 50px;
+        font-size: 20px;
+
+    }
+}
+
+@media screen and (max-width:320px) {
+    .absldiv {
+        padding: 48px 89px 48px 89px;
+        text-align: center;
+    }
+
+    .shopinformation span {
+        font-size: 25px;
+    }
+
+    .evaltitle h1 {
+        font-size: 30px;
+    }
+
+}
+
+/*-----------------------------------------register seller page---------------------------------------------------------------------- */
+.reg-seller {
+    background: url(../img/bg\ img.png) no-repeat;
+    background-size: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.reg-seller form {
+    background: #fff;
+    margin-top: 200px;
+    box-shadow: gray 1px 1px 1px 1px;
+    border-radius: 20px;
+    position: relative;
+
+}
+
+.sellerusericon a {
+    position: absolute;
+    top: -70px;
+    font-size: 100px;
+    color: black;
+}
+
+.reg-seller form input,
+.reg-seller form select {
+    border: none;
+    width: 80%;
+    padding: 20px 10px;
+    background: #f3f3f3;
+    color: #a395ae;
+    margin-bottom: 50px;
+    font-size: 30px;
+    border-radius: 20px;
+}
+
+.formdetail input::placeholder {
+    color: #a395ae;
+
+}
+
+.formdetail {
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+.marketimg {
+    padding-right: 50px;
+}
+
+.marketimg p {
+    font-size: 20px;
+}
+
+.marketimg a {
+    color: red;
+}
+
+.formdetail button {
+    font-size: 30px;
+    color: white;
+    background: linear-gradient(#e22e52, #aa0f4b);
+    padding: 10px 100px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 20px;
+
+}
+
+@media screen and (max-width:425px) {
+    .reg-seller {
+        background: url(../img/bg\ img.png) no-repeat;
+        background-size: 100%;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+    .reg-seller form {
+        margin-top: 60px;
+
+    }
+
+    .sellerusericon a {
+        top: -30px;
+        font-size: 50px;
+    }
+
+    .reg-seller form input,
+    .reg-seller form select {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .marketimg {
+        font-size: 20px;
+    }
+
+    .marketimg p {
+        font-size: 14px;
+    }
+
+
+}
+
+@media screen and (max-width:320px) {
+    .reg-seller form {
+        padding: 0;
+        /* margin-top: 60px; */
+    }
+
+    .marketimg {
+        font-size: 15px;
+    }
+
+    .marketimg p {
+        font-size: 10px;
+    }
+}
+
+/*-----------------------------------------register  page---------------------------------------------------------------------- */
+.forgetpass {
+    margin: 20px 0px;
+}
+
+.forgetpass a {
+    color: #ee4764;
+    font-size: 29px;
+}
+
+@media screen and (max-width:575px) {
+    .forgetpass .text-right,
+    .forgetpass .text-left {
+        text-align: center !important;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .regform button:last-child {
+        font-size: 12px;
+    }
+    .regform button {
+        font-size: 15px;
+    }
+
+    .forgetpass a {
+        font-size: 19px;
+    }
+
+}
+
+/*-----------------------------------------contactus  page---------------------------------------------------------------------- */
+.contactus {
+    margin: 50px 0px;
+}
+
+.contactus form .div {
+    background: linear-gradient(#e22e52, #aa0f4b);
+    border-radius: 30px;
+}
+
+.contactus p {
+    color: #fff;
+    font-size: 50px;
+    padding: 50px 0px;
+}
+
+.contactus input {
+    font-size: 20px;
+    width: 90%;
+    padding: 15px 10px;
+    border-radius: 50px;
+    margin-bottom: 40px;
+    border: none;
+
+}
+
+.contactus textarea {
+    font-size: 20px;
+    width: 90%;
+    padding: 15px 10px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+
+}
+
+.contactus button {
+    font-size: 30px;
+    color: white;
+    background: #240041;
+    padding: 15px 70px;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 40px;
+}
+
+.radio .radiospan {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-left: 52px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline;
+    color: white;
+}
+
+.radio input {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: -10;
+    height: 25px;
+    width: 25px;
+    background: black;
+    border-radius: 50px;
+    background-color: #eee;
+}
+
+.radio input:checked~.checkmark {
+    background-color: #240041;
+}
+
+@media screen and (max-width:991px) {
+    .radio .radiospan {
+        padding-left: 20px;
+        margin-left: 22px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .contactus button {
+        font-size: 20px;
+        padding: 10px 40px;
+    }
+
+}
+
+@media screen and (max-width:575px) {
+
+    .contactus .offset-3 {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .contactus button {
+        font-size: 30px;
+        padding: 10px 40px;
+    }
+
+    .radio input {
+        width: 68%;
+    }
+}
+
+
+@media screen and (max-width:375px) {
+    .radio .radiospan {
+        /* padding-left: 30px;
+        margin-left: 22px;
+        margin-bottom: 22px; */
+        display: block;
+        font-size: 22px;
+
+    }
+
+    .radio input {
+        width: 59%;
+    }
+
+
+}
+
+@media screen and (max-width:375px) {
+    .contactus button {
+        font-size: 20px;
+        padding: 10px 30px;
+    }
+}
+
+/*-----------------------------------------my account  page---------------------------------------------------------------------- */
+
+.myaccounticon svg {
+    font-size: 100px;
+    margin: 50px 0px;
+    color: white;
+    background: black;
+    border-radius: 90%;
+    border: none;
+}
+
+/*-----------------------------------------cart  page---------------------------------------------------------------------- */
+.cart {
+    background: url(../img/cart-bg.png) no-repeat;
+    background-size: 90%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.cartitem {
+    background: #fff;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: #d7d7d7 0px 0px 5px 5px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+
+}
+
+.cartitem div {
+    padding: 0px 5px;
+    margin: 0px;
+}
+
+.cartitem img {
+    width: 100%;
+    height: 85%;
+    border-radius: 20px;
+
+}
+
+.cartitem select option {
+    color: #ec3454;
+}
+
+.cartitem button {
+    /* font-size: 30px; */
+    color: white;
+    background: #ec3454;
+    padding: 5px 50px;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width:768px) {
+    /* .cartitem img {
+        width: 115px;
+        height: 150px;
+    } */
+}
+
+@media screen and (max-width:575px) {
+    .cartitem img {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .cartitem {
+        text-align: center;
+    }
+
+    .cart .offset-3 {
+        margin: 10px;
+    }
+
+}
