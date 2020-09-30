@@ -819,100 +819,10 @@ class MainController extends Controller
                 return redirect(url(route('client-orders-current',auth('client-web')->user()->id)));
             }  
 
-        }elseif ( ! $request->restaurant_id[0] == $request->restaurant_id[1] && $request->restaurant_id[2] && $request->restaurant_id[3]){
-
-            foreach($request->restaurant_id as $reqRestaurant){
-
-                $restaurant = Restaurant::where('id',$reqRestaurant)->first();
-            
-                if($restaurant->state == 'close'){
-                    flash()->success("هذا المطعم غير متاح الان");
-                    return back();
-                }
-            
-                $order = auth('client-web')->user()->orders()->create([
-
-                    'restaurant_id' => $request->restaurant_id[0],
-                    'client_id' => auth('client-web')->user()->id,
-                    'note' => $request->note,
-                    'state' =>'pending',
-                    'address' => $request->address,
-                    'payment_method_id' => $request->payment_id,
-            
-                ]);
-                // dd( $request->product);
-
-                $cost = 0;
-                $delivery_cost =   $restaurant->delivery_cost;
-            
-                foreach ($request->product as $p) {
-                    if(isset($p['product_id'])){
-                        $product = Product::find($p['product_id']);
-                        $readyProduct = [
-                            $p['product_id'] => [
-                            'quantity' => $p['quantity'],
-                            'price' => $product->price,
-                            'notes' => (isset($p['notes'])) ? $p['notes'] : '',
-                            ]
-                        ];
-                        $order->products()->attach($readyProduct);
-                        $order->update(['price' => $product->price]);
-                        $cost += ($product->price * $p['quantity']);
-                    }else{
-                        flash()->success("Not Found Product");
-                        return back();
-                    }
-                }
-                // dd($cost);
-                if($cost >= $restaurant->minimum_order){
-
-                    $total = $cost + $delivery_cost;
-                    $commission = Setting::first()->commission * $cost;
-                    $net = $total - $commission;
-                
-                    $update = $order->update([
-                        'cost' => $cost,
-                        'delivery_cost' => $delivery_cost,
-                        'total_cost' => $total,
-                        'commission' => $commission,
-                        'net' => $net,
-                        'quantity' => $p['quantity'],
-                    ]);
-                
-                }else{
-                    $order->delete();
-                    flash()->success("'لايمكن أن يكون الطلب أقل من'.$restaurant->minimum_order.'جنيه'");
-                    return back();
-                }
-            
-                $notification = $restaurant->notifications()->create([
-                    'title' => 'يوجد طلب جديد',
-                    'content' => auth('client-web')->user()->name .'لديك طلب جديد من العميل',
-                    'notifiable_id' => $restaurant->id,
-                    'notifiable_type' => 'restaurant',
-                ]);
-            
-                $payment = PaymentMethod::where('id',$request->payment_method_id)->first();
-                
-                // $or = $order->fresh()->load('products');
-                //$or = Order::where('id',$order->id)->first();
-                //$tokens = $restaurant->tokens()->where('token','!=', null)->pluck('token')->toArray();
-            
-                $data = [
-                    'client_Name' => auth('client-web')->user()->name,
-                    'address' => $request->address,
-                    'Quantity' => $p['quantity'],
-                    'The_Payment' => $payment->name,
-                ];  
-            
-                if ($restaurant->email){
-                    Mail::to($restaurant->email)
-                        ->bcc("amrhuusien99@gmail.com")
-                        ->send(new NewOrder($data));
-                    flash()->success("تم الطلب بنجاح");
-                    return back();
-                }
-            }    
+        }else{
+            flash()->success("ليس مسموح بالطلب الا من مطعم واحد ");
+            return back();
+            }
         }
 
     }
@@ -995,9 +905,7 @@ class MainController extends Controller
                 return back();
 
             }
-        }    
-
-    }
+        }
 
     ///////////////////////////////////////////////////////////////////////////////////////// end client order cycle
 
