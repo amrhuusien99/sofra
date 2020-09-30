@@ -54,7 +54,9 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach    
+                    @endforeach   
+                @else                                
+                    <p style="background:#a30f02;color:fff;font-size:25px;" class="text-center"> Sorry Not Found Data </p>
                 @endisset    
             </div>
         </div>

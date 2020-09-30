@@ -79,13 +79,13 @@
                                                 @endif
                                             </p>
                                             @if( auth()->guard('restaurant-web')->check())
-                                                <a style="text-decoration:none;font-size:12;" href="{{url(route('product-edit',$product->id))}}" class="btn btn-info btn-xs"><i class="fas fa-edit"></i></a>
-                                                <a style="text-decoration:none;font-size:12;" href="{{url(route('product-delete',$product->id))}}" class="btn btn-danger btn-xs"><i class="fa fa-trash-alt"></i></a>
+                                                <a style="text-decoration:none;font-size:12px;" href="{{url(route('product-edit',$product->id))}}" class="btn btn-info btn-xs"><i class="fas fa-edit"></i></a>
+                                                <a style="text-decoration:none;font-size:12px;" href="{{url(route('product-delete',$product->id))}}" class="btn btn-danger btn-xs"><i class="fa fa-trash-alt"></i></a>
                                             @endif
                                             @if( auth()->guard('client-web')->check())
-                                                <a style="text-decoration:none;font-size:12;" href="{{url(route('client-make-order',$product->id))}}" class="btn btn-success btn-xs"> طلب الوجبه</a>
-                                                <a style="text-decoration:none;font-size:12;" href="{{url(route('client-add-cart',['product_id'=>$product->id,'client_id'=>auth('client-web')->user()->id]))}}" class="btn btn-success btn-xs">
-                                                    <i class="fas fa-cart-plus btn btn-success btn-xs"></i>
+                                                <a style="text-decoration:none;font-size:12px;" href="{{url(route('client-make-order',$product->id))}}" class="btn btn-success btn-xs"> طلب الوجبه</a>
+                                                <a style="text-decoration:none;font-size:17px;" href="{{url(route('client-add-cart',['product_id'=>$product->id,'client_id'=>auth('client-web')->user()->id]))}}" class="btn btn-success btn-xs">
+                                                    <i class="fas fa-cart-plus"></i>
                                                 </a>
                                             @endif
                                         </div>

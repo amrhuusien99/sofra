@@ -280,7 +280,7 @@ class MainController extends Controller
 
     $restaurant = Restaurant::find($request->restaurant_id);
 
-    if($restaurant->state == 'close')
+    if($restaurant->state == 'close' && $restaurant->is_activate == 0)
     {
       return responseJson(0, 'هذا المطعم مغلق');
     }
@@ -309,9 +309,6 @@ class MainController extends Controller
         ]
       ];
       $order->products()->attach($readyProduct);
-      // dd($product->price);
-      $order->update(['price' => $product->price]);
-      // $up = $order->update($readyProduct);
       $cost += ($product->price * $p['quantity']);
 
     }

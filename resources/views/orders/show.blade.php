@@ -44,6 +44,11 @@
             </tr>
 
             <tr>
+                <th class="text-center">The Meal</th>
+                <td class="text-center">{{optional($model->products)->name}}</td>
+            </tr>
+
+            <tr>
               <th class="text-center" width="40%">Note</th>
               <td class="text-center">{{$model->note}}</td>
             </tr>

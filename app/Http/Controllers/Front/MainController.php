@@ -541,20 +541,6 @@ class MainController extends Controller
     }
 
 
-    public function productCartDelete($id){
-
-        if('id'){
-
-            $ptoductdelete = Cart::findOrFail($id);
-            $ptoductdelete->delete();
-            flash()->success("Deleted");
-            return back();
-
-        }
-
-    }
-
-
     public function clientAddCart(Request $request){
 
         $validator = validator()->make($request->all(), [
@@ -577,13 +563,27 @@ class MainController extends Controller
     }
 
 
+    public function productCartDelete($id){
+
+        if('id'){
+
+            $ptoductdelete = Cart::findOrFail($id);
+            $ptoductdelete->delete();
+            flash()->success("Deleted");
+            return back();
+
+        }
+
+    }
+
+
     public function clientNewOrder(Request $request){
 
         $validator = validator()->make($request->all(), [
 
             'restaurant_id' =>'required|exists:restaurants,id',
-            'product_id' =>'required|exists:products,id',
-            'quantity' =>'required',
+            'product.*.product_id' =>'required|exists:products,id',
+            'product.*.quantity' =>'required',   
             'address' =>'required',
             'payment_id' =>'required|exists:payment_methods,id',
       
@@ -594,30 +594,47 @@ class MainController extends Controller
             return back();
         }
 
-        $product = Product::where('id',$request->product_id)->first();
         $restaurant = Restaurant::where('id',$request->restaurant_id)->first();
     
-        if($restaurant->state == 'close'){
+        if($restaurant->state == 'close' || $restaurant->is_activate == 0){
             flash()->success("هذا المطعم غير متاح الان");
             return back();
         }
     
-        $order = $product->orders()->create([
+        $order = auth('client-web')->user()->orders()->create([
     
             'restaurant_id' => $request->restaurant_id,
             'client_id' => auth('client-web')->user()->id,
             'note' => $request->notes,
             'state' =>'pending',
             'address' => $request->address,
-            'quantity' => $request->quantity,
-            'price' => $product->price,
             'payment_method_id' => $request->payment_id,
     
         ]);
-    
+
+        
         $cost = 0;
         $delivery_cost = $restaurant->delivery_cost;
-        $cost += ($product->price * $request->quantity);
+
+        foreach ($request->product as $p) { 
+            // dd($p);
+            if(isset($p['product_id'])){
+                $product = Product::find($p['product_id']);
+                $readyProduct = [
+                  $p['product_id'] => [
+                    'quantity' => $p['quantity'],
+                    'price' => $product->price,
+                    'note' => (isset($p['note'])) ? $p['note'] : '',
+                  ]
+                ];
+                // dd($readyProduct);
+                $order->products()->attach($readyProduct);
+                $cost += ($product->price * $p['quantity']);
+            }else{
+                flash()->success("Not Found Product");
+                return back();
+            }  
+        }
     
         if($cost >= $restaurant->minimum_order){
             $total = $cost + $delivery_cost;
@@ -658,7 +675,7 @@ class MainController extends Controller
             'client_Name' => auth('client-web')->user()->name,
             'Product_name' => $product->name,
             'address' => $request->address,
-            'Quantity' => $request->quantity,
+            'Quantity' => $p['quantity'],
             'The_Payment' => $payment->name,
         ];  
     
@@ -666,8 +683,15 @@ class MainController extends Controller
             Mail::to($restaurant->email)
                 ->bcc("amrhuusien99@gmail.com")
                 ->send(new NewOrder($data));
+
+    //////////////////////////////////////////////////////////////////////////////// delete product from cart after make order
+
+            $ptoductdelete = Cart::where('client_id',auth('client-web')->user()->id);
+            // dd($ptoductdelete);
+            $ptoductdelete->delete();
+
             flash()->success("تم الطلب بنجاح");
-            return back();
+            return redirect(url(route('client-orders-current',auth('client-web')->user()->id)));
         }   
     }
 
@@ -679,8 +703,8 @@ class MainController extends Controller
         $validator = validator()->make($request->all(), [
 
             'restaurant_id' =>'required|exists:restaurants,id',
-            'product' =>'required|exists:products,id',
-            'quantity' =>'required',   
+            'product.*.product_id' =>'required|exists:products,id',
+            'product.*.quantity' =>'required',   
             'address' =>'required',
             'payment_id' =>'required|exists:payment_methods,id',
       
@@ -691,12 +715,15 @@ class MainController extends Controller
             return back();
         }
         // dd($request);
-        
-        if ( $request->restaurant_id[0] == $request->restaurant_id[1] && $request->restaurant_id[2] && $request->restaurant_id[3]){
+        // for ($i=0; $i < count($request->restaurant_id); $i++) {
+        //     // dd($i);
+        // }
+
+        if ( $request->restaurant_id[0] == $request->restaurant_id[1]){
 
             $restaurant = Restaurant::where('id',$request->restaurant_id)->first();
         
-            if($restaurant->state == 'close'){
+            if($restaurant->state == 'close' && $restaurant->is_activate == 0){
                 flash()->success("هذا المطعم غير متاح الان");
                 return back();
             }
@@ -705,35 +732,34 @@ class MainController extends Controller
 
                 'restaurant_id' => $request->restaurant_id[0],
                 'client_id' => auth('client-web')->user()->id,
-                'note' => $request->note,
                 'state' =>'pending',
                 'address' => $request->address,
-                'payment_method_id' => $request->payment_id,
+                'payment_method_id' => $request->payment_id
         
             ]);
-
-            // dd( $request->product);
 
             $cost = 0;
             $delivery_cost =   $restaurant->delivery_cost;
         
-            foreach ($request->product as $p) {
+            // for ($i=0; $i < count($request->product['product_id']); $i++) { 
+            foreach ($request->product as $p) { 
+                // dd($p);
                 if(isset($p['product_id'])){
                     $product = Product::find($p['product_id']);
                     $readyProduct = [
-                        $p['product_id'] => [
+                      $p['product_id'] => [
                         'quantity' => $p['quantity'],
                         'price' => $product->price,
-                        'notes' => (isset($p['notes'])) ? $p['notes'] : '',
-                        ]
+                        'note' => (isset($p['note'])) ? $p['note'] : '',
+                      ]
                     ];
+                    // dd($readyProduct);
                     $order->products()->attach($readyProduct);
-                    $order->update(['price' => $product->price]);
                     $cost += ($product->price * $p['quantity']);
                 }else{
                     flash()->success("Not Found Product");
                     return back();
-                }
+                }  
             }
             // dd($cost);
             if($cost >= $restaurant->minimum_order){
@@ -764,7 +790,7 @@ class MainController extends Controller
                 'notifiable_type' => 'restaurant',
             ]);
         
-            $payment = PaymentMethod::where('id',$request->payment_method_id)->first();
+            $payment = PaymentMethod::where('id',$request->payment_id)->first();
             
             // $or = $order->fresh()->load('products');
             //$or = Order::where('id',$order->id)->first();
@@ -781,8 +807,16 @@ class MainController extends Controller
                 Mail::to($restaurant->email)
                     ->bcc("amrhuusien99@gmail.com")
                     ->send(new NewOrder($data));
+                    
+        //////////////////////////////////////////////////////////////////////////////// delete product from cart after make order
+
+                    $ptoductdelete = Cart::where('client_id',auth('client-web')->user()->id);
+                    // dd($ptoductdelete);
+                    $ptoductdelete->delete();
+
+
                 flash()->success("تم الطلب بنجاح");
-                return back();
+                return redirect(url(route('client-orders-current',auth('client-web')->user()->id)));
             }  
 
         }elseif ( ! $request->restaurant_id[0] == $request->restaurant_id[1] && $request->restaurant_id[2] && $request->restaurant_id[3]){

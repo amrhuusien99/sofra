@@ -17,10 +17,12 @@
     <!---------------------------------------- previous-orders page-------------------------------------------------------->
     <section class="searchresturant">
         <div class="container">
+            <br>
+            <br>
+            @include('flash::message')    
             <div class="row ">
                 @isset($current)
                     @foreach($current as $order) 
-                        @include('flash::message')
                         <div class="col-sm-12 mt-4">
                             <div class="previousorderitem">
                                 <div class="row ">
@@ -66,7 +68,9 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach    
+                    @endforeach 
+                @else                                
+                    <p style="background:#a30f02;color:fff;font-size:25px;" class="text-center"> Sorry Not Found Data </p>
                 @endisset    
             </div>
         </div>
