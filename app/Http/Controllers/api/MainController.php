@@ -161,12 +161,12 @@ class MainController extends Controller
   public function productDelete(Request $request)
   {
 
-    $products = Product::where('id',$request->product_id)->first();
+    $product = Product::where('id',$request->product_id)->first();
 
-    if(!$products){
+    if(!$product){
           return responseJson(0,'not post found');
       }else{
-          $products->delete();
+          $product->delete();
           return responseJson(1 ,'تم الحذف بنجاح');
       }
   }
@@ -301,7 +301,7 @@ class MainController extends Controller
     foreach ($request->products as $p) {
 
       $product = Product::find($p['product_id']);
-      $readyProduct = [
+      $readyProduct = [ 
         $p['product_id'] => [
           'quantity' => $p['quantity'],
           'price' => $product->price,
@@ -530,48 +530,31 @@ class MainController extends Controller
     {
       return responseJson(0, $validator->errors()->first()); 
     }
-    
-    //dd($request->user()->first()->id);
-    //$restaurant = $request->user()->orders()->find('restaurant_id',$request->user()->id)->first();
 
+    $orders = $request->user()->orders()->where(function($order) use($request){
 
-    $restaurant = Order::where('restaurant_id',$request->restaurant_id)->first();
-
-    //dd($restaurant);
-
-    if($restaurant){
-
-      if($request->state == 'accepted')
-      {
-        $orders = Order::where('state','accepted')->get();
-
-          return responseJson(1, 'success', $orders );
-      }
-
-      if($request->state == 'delivered')
-      {
-        $delivery = Order::where('state','delivered')->get();
-
-          return responseJson(1, 'success', $delivery );
-      }
-
-      if($request->state == 'rejected')
-      {
-        $rejected = Order::where('state','rejected')->get();
-
-          return responseJson(1, 'success', $rejected );
-      }
-
-      if($request->state == 'declined')
-      {
-        $declined = Order::where('state','declined')->get();
-
-          return responseJson(1, 'success', $declined );
+        if ($request->has('state') && $request->state == 'pending')
+        {
+            $order->where('state', 'pending');
+        }elseif ($request->has('state') && $request->state == 'accepted')
+        {
+            $order->where('state', 'accepted');
+        }elseif ($request->has('state') && $request->state == 'rejected')
+        {
+            $order->where('state', 'rejected');
+        }elseif ($request->has('state') && $request->state == 'declined')
+        {
+            $order->where('state', 'declined');
+        }elseif ($request->has('state') && $request->state == 'delivered')
+        {
+            $order->where('state', 'delivered');
+        }elseif ($request->has('state') && $request->state == 'complete')
+        {
+            $order->where('state', 'complete');
         }
+    })->get();
 
-    }else{
-      return responseJson(0, 'خطأ');
-    }
+    return responseJson(0, 'تم بنجاح', $orders);
 
     //  if($request->state == 'delivered' || $request->state == 'rejected' || $request->state == 'declined' )
     //  {
